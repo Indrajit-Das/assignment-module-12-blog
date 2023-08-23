@@ -1,13 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     distDir:"build",
-    async headers(){
-        return[
+    async headers() {
+        return [
             {
-                key:"X-Frame-Options",
-                value:"DENY"
-            }
-        ]
+            source: '/*',
+            headers: [
+                {
+                    key:"X-Frame-Options",
+                    value:"DENY"
+                }
+            ],
+            },
+        ] 
     }
 }
 
