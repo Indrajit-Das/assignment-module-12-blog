@@ -4,9 +4,12 @@ import getSinglePost from "@/lib/singlePost";
     const id = params.id;
     const data= await getSinglePost(id);
     return (
-        <div>
-            <p>{data?.postDetails?.title}</p> 
-            <p>{data?.postDetails?.content}</p>
+        <div className="p-10">
+            <div className="flex justify-between">
+                <h2 className='font-xl font-bold mb-5 underline underline-offset-8'>{data?.postDetails?.title}</h2>
+                {(data.postDetails!==null)?<span>Created-At :&nbsp; {data?.postDetails?.created_at}</span>:""}
+            </div> 
+            <p className="justify-center">{data?.postDetails?.content}</p>
         </div>
     );
 };

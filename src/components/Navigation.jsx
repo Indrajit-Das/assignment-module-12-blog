@@ -16,9 +16,9 @@ const Navigation = () => {
           {/* Left Section */}
           <div className="flex-shrink-0 flex items-center">
             <Link href={"/"} className="flex-shrink-0">
-                <img className="h-8 w-8" src="#" alt="Brand Logo" />
+              <span className="text-white text-lg font-semibold ml-2 uppercase">Blog</span>
             </Link>
-            <span className="text-white text-lg font-semibold ml-2">Your Brand</span>
+           
           </div>
 
           {/* Right Section */}

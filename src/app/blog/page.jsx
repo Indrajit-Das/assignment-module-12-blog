@@ -7,9 +7,11 @@ const Blog = async()=> {
         <div>
             {data.map((element)=>{
                 return (
-                    <p key={element.id}>
-                        <Link href={`blog/${element.id}`}>{element.title}</Link>
-                    </p>
+                    <div key={element.id} className='p-2 m-3 border-2 border-slate-800 rounded-lg'>
+                        <p className='p-2 ml-5'>
+                            <Link href={`blog/${element.id}`}>Post-Title -&gt;&nbsp;{element.title}</Link>
+                        </p>
+                    </div>
                 );
             })}
              

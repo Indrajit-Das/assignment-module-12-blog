@@ -91,12 +91,6 @@ function App() {
                     </button>
                 </div>
             </form>
-            <div>
-                <p>{formData.name}</p>
-                <p>{formData.email}</p>
-                <p>{formData.website}</p>
-                <p>{formData.message}</p>
-            </div>
         </div>
     );
 }
