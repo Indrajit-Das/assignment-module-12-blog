@@ -2,7 +2,7 @@
 const nextConfig = {
     // distDir:"build",
     async headers() {
-        return [{source: '/(.*)',headers: [{key:"X-Frame-Options",value:"DENY"}],},] 
+        return [{source: '/:path*',headers: [{key:"X-Frame-Options",value:"DENY"}],},] 
     },
     images:{
         remotePatterns:[
