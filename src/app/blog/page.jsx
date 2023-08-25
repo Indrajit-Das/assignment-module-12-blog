@@ -1,5 +1,6 @@
 import getPosts from '../../lib/posts';
 import Link from "next/link";
+import Image from "next/image";
 
 const Blog = async()=> {
     const data = await getPosts();
@@ -7,10 +8,13 @@ const Blog = async()=> {
         <div>
             {data.map((element)=>{
                 return (
-                    <div key={element.id} className='p-2 m-3 border-2 border-slate-800 rounded-lg'>
-                        <p className='p-2 ml-5'>
-                            <Link href={`blog/${element.id}`}>Post-Title -&gt;&nbsp;{element.title}</Link>
-                        </p>
+                    <div key={element.id} className='p-2 m-2 border-2 border-slate-800 rounded-lg'>
+                        <Link href={`blog/${element.id}`}>
+                            <div className="flex">
+                                <Image src={element.img} height="200" width="300" alt={element.title} />
+                                <p className='p-1 ml-5'>Title -&gt;&nbsp;{element.title}</p>
+                            </div>
+                        </Link>
                     </div>
                 );
             })}
